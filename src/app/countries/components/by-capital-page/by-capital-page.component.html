@@ -1,1 +1,20 @@
-<p>by-capital-page works!</p>
+<h2>By Capital</h2>
+<div class="row">
+  <div class="col">
+    <shared-search-box
+      (onValue)="searchByCapital($event)"
+      placeholder="Buscar..."
+    ></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <ul>
+      <li *ngFor="let country of countries">
+        {{ country.capital }} - {{ country.population }}
+      </li>
+    </ul>
+  </div>
+</div>
