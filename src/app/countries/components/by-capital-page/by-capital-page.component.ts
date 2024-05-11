@@ -16,6 +16,5 @@ export class ByCapitalPageComponent {
     const country = this.countryServices.searchCapital(arg).subscribe((countries) => {
       this.countries = countries;
     });
-    console.log(this.countries)
   }
 }
