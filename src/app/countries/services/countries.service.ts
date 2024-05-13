@@ -43,7 +43,7 @@ export class CountriesService {
   getCountriesResquest(url: string): Observable<Country[]>{
     return this.http.get<Country[]>(url).pipe(
       catchError(() => of([])),
-      delay(2000)
+      // delay(2000)
     );
   }
 }

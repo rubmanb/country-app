@@ -1,8 +1,9 @@
 <h2>Por Capital</h2>
 <div class="row">
   <div class="col">
+    <!-- (onValue)="searchByCapital($event)" -->
     <shared-search-box
-      (onValue)="searchByCapital($event)"
+      (onDebounce)="searchByCapital($event)"
       placeholder="Buscar..."
     ></shared-search-box>
   </div>
