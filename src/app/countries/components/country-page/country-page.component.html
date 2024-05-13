@@ -17,6 +17,7 @@
     <div class="col-4">
       <h3>Bandera</h3>
       <img [src]="country.flags.svg" [alt]="country.name.common" height="200" width="250" class="img-thumbnail">
+      <p>{{country.flags.alt || '[No hay descripción]'}}</p>
     </div>
     <div class="col">
       <h3>Información</h3>
@@ -35,6 +36,9 @@
         </li>
         <li class="list-group-item">
           <strong>Ubicación: </strong><a [href]="country.maps.googleMaps" target="_blank">{{country.maps.googleMaps}}</a>
+        </li>
+        <li class="list-group-item">
+          <strong>Dominio web: </strong>{{country.tld}}
         </li>
       </ul>
     </div>
