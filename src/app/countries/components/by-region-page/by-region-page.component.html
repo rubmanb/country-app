@@ -5,7 +5,11 @@
       (onDebounce)="searchByRegion($event)"
       placeholder="Buscar..."
     ></shared-search-box> -->
-      <button class="btn mx-2" *ngFor="let region of regions" (click)="searchByRegion(region)">
+      <button
+        class="btn mx-2"
+        [ngClass]="{'btn-outline-primary': selectedRegions === region}"
+        *ngFor="let region of regions"
+        (click)="searchByRegion(region)">
         {{region}}
       </button>
   </div>
