@@ -27,7 +27,7 @@ export class CountriesService {
     return this.getCountriesResquest(url).pipe(
       tap( countries =>
         this.cacheStore.byCapital = {term: capital, countries: countries}),
-      tap(() => this.saveToLocalStorage),
+      tap(() => this.saveToLocalStorage()),
     );
   }
 
@@ -36,7 +36,7 @@ export class CountriesService {
     return this.getCountriesResquest(url).pipe(
       tap( countries =>
         this.cacheStore.byCountries = {term: country, countries: countries}),
-      tap(() => this.saveToLocalStorage),
+      tap(() => this.saveToLocalStorage()),
     );
   }
 
@@ -45,7 +45,7 @@ export class CountriesService {
     return this.getCountriesResquest(url).pipe(
       tap( countries =>
         this.cacheStore.byRegion = {region: region, countries: countries}),
-      tap(() => this.saveToLocalStorage),
+      tap(() => this.saveToLocalStorage()),
     );
   }
 
